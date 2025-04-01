@@ -22,4 +22,3 @@ requests==2.32.3
 rsa==4.9
 urllib3==2.3.0
 Werkzeug==0.16.0
-gunicorn
