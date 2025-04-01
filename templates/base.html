@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+      
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <!-- <link href="css/custom.css" rel="stylesheet"> -->
+
+  <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+</head>
+<body>
+<!-- Navbar -->
+    
+    
+<!-- Navigation -->
+
+<header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+     
+        <a class="navbar-brand" href="index.html">Javier Cristobal</a>
+       
+     
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/appindex">Home</a></li>
+          <li class="dropdown" id="usernav"><a href="#"><span>About Me</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+                          
+              
+                  <li><a href="/certificates">Certificates</a></li>
+                  <li><a href="/briefing">Personal Briefing</a></li>
+                  
+                </ul>
+             </li>              
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="{{ url_for('contact') }}">Contact</a></li>
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+<main role="main">
+
+<div class="jumbotron">
+    <div class="container">
+      <h1 class="header1">Javier Cristobal</h1>
+      <p>This is my website with all my curriculum and certificates</p>
+      <p><a class="btn btn-primary btn-lg" href="/static/cv/cv.pdf" role="button" target="_blank">Download Curriculum in PDF &raquo;</a></p>
+    </div>
+</div>
+
+    {% block content %}
+    {% endblock %}
+
+  
+</main> 
+  <!-- Footer -->
+   <footer id="footer" class="footer mt-auto py-3">
+  <div class="container">
+    <span class="text-muted">Place sticky footer content here.</span>
+  </div>
+</footer>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
