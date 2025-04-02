@@ -47,7 +47,7 @@ def briefing():
 
 @app.route('/pdf') #the url you'll send the user to when he wants the pdf
 def pdfviewer():
-    return redirect("/static/cv/cv.pdf") #the pdf itself
+    return redirect("../static/cv/cv.pdf") #the pdf itself
 
 
 @app.route('/contact', methods=['GET', 'POST'])
