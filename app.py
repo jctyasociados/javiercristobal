@@ -47,7 +47,7 @@ def briefing():
 
 @app.route('/pdf') #the url you'll send the user to when he wants the pdf
 def pdfviewer():
-    return redirect("../static/cv/cv.pdf") #the pdf itself
+    return redirect("https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z2785b5027cd0b80a708d0818_f10960accc53e1d3f_d20250402_m123149_c000_v0001084_t0019_u01743597109316") #the pdf itself
 
 
 @app.route('/contact', methods=['GET', 'POST'])
