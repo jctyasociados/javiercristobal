@@ -45,6 +45,11 @@ def certificates():
 def briefing():
     return render_template('briefing.html')
 
+@app.route('/pdf') #the url you'll send the user to when he wants the pdf
+def pdfviewer():
+    return redirect("/static/cv/cv.pdf") #the pdf itself
+
+
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     sitekey = app.config['RECAPTCHA_SITE_KEY']
