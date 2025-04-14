@@ -2,12 +2,23 @@
 {% block title %}Javier Cristobal{% endblock %}
 {% block content %}
 
-<div class="container">
+<div class="container" style="margin-bottom: 70px;">
 <hr>
 <div class="container">
      <h2>Education</h2>
      <div class="row">
-      <div class="col-2"><img src="https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z2785b5027cd0b80a708d0818_f1157af062bb847bb_d20250407_m165959_c000_v0001080_t0048_u01744045199085" height="50px;" width="50px;" alt="Schiller International University"></div>
+      <div class="col-2">
+		<!--Visible only on mobile -->
+		<div class="d-block d-sm-none d-lg-none"> 
+    	<img src="https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z2785b5027cd0b80a708d0818_f1157af062bb847bb_d20250407_m165959_c000_v0001080_t0048_u01744045199085" height="50px;" width="50px;" alt="Schiller International University">
+		</div>
+
+		<!-- Hidden only on mobile-->
+		<div class="d-none d-sm-block"> 
+    	<img src="https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z2785b5027cd0b80a708d0818_f1157af062bb847bb_d20250407_m165959_c000_v0001080_t0048_u01744045199085" height="100px;" width="100px;" alt="Schiller International University">
+		</div>
+      
+      </div>
       <div class="col">
         <p class="bold">Schiller International University</p>
         <p>Bachellor in Business Administration: 1990-1994</p>
