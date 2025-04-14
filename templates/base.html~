@@ -86,22 +86,23 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
      
-        <a class="navbar-brand" href="index.html">Javier Cristobal</a>
+        <a class="navbar-brand" href="/">Javier Cristobal</a>
        
      
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="/appindex">Home</a></li>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
           <li class="dropdown" id="usernav"><a href="#"><span>About Me</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-                          
+              
+                         
               
                   <li><a href="/certificates">Certificates</a></li>
-                  <li><a href="/briefing">Personal Briefing</a></li>
+                  <li><a href="/briefing">Briefing</a></li>
                   
-                </ul>
-             </li>              
+                
+                         
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="{{ url_for('contact') }}">Contact</a></li>
@@ -119,7 +120,7 @@
     <div class="container">
       <h1 class="header1">Javier Cristobal</h1>
       <p>This is my website with all my curriculum and certificates</p>
-      <p><a class="btn btn-primary btn-lg" href="/static/cv/cv.pdf" role="button" target="_blank">Download Curriculum in PDF &raquo;</a></p>
+      <p><a class="btn btn-primary btn-lg" href="/pdf" role="button" target="_blank">See Curriculum in PDF &raquo;</a></p>
     </div>
 </div>
 
@@ -135,3 +136,78 @@
   </div>
 </footer>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+  <script src="js/jquery-3.2.1.min.js"></script>   
+<script>
+$(document).ready(function () {
+    
+if(screen.availHeight > screen.availWidth){
+    //alert("portrait");
+    
+       $('#footer').addClass("fixed-bottom");
+      
+    
+}
+ if (screen.availHeight < screen.availWidth && screen.availHeight < 500){
+     
+     //alert("landscape");
+     $('#footer').removeClass("fixed-bottom");
+     
+   // e.preventDefault();
+ }
+ else {
+    $('#footer').addClass("fixed-bottom"); 
+    
+    
+     
+ }
+ 
+$(window).on('resize', function(){
+   
+ if(screen.availHeight > screen.availWidth){
+    //alert("portrait");
+    
+       $('#footer').addClass("fixed-bottom");
+      
+    
+    
+}
+ if (screen.availHeight < screen.availWidth && screen.availHeight < 500){
+     
+     //alert("landscape");
+     $('#footer').removeClass("fixed-bottom");
+    
+   // e.preventDefault();
+ }
+ else {
+    $('#footer').addClass("fixed-bottom"); 
+    
+     
+ }
+}); 
+ 
+});
+
+
+
+</script>
+    <script src="js/form-validation.js"></script>
+     
+    
+    <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+ 
+    
+    
+</body>
+</html>
