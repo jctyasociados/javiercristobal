@@ -54,21 +54,18 @@ def pdfviewer():
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     sitekey = app.config['RECAPTCHA_SITE_KEY']
-    form_data = session.pop('form_data', {})
-
     if request.method == 'POST':
         name = request.form['name']
         email = request.form['email']
         subject = request.form['subject']
         message = request.form['message']
-        captcha_response = request.form.get('g-recaptcha-response', '')
-
+        captcha_response = request.form['g-recaptcha-response']
+    
         if not is_human(captcha_response):
             flash("Sorry! Please check 'I'm not a robot'.", 'warning')
             session['form_data'] = {'name': name, 'email': email, 'subject': subject, 'message': message}
             return redirect(url_for('contact'))
-
-        else:
+        else:    
             #send contact mail
             html = "<html><head></head><body>"
             html += "<p>Name: " + name + "</p>"
@@ -77,7 +74,7 @@ def contact():
             message = "<br />".join(message.split("\n"))
             html += "<p>Message: <br /><br />" + message + "</p>"
             html += "</body></html>"
-
+        
             body = html
             email_username = app.config['MAIL_USERNAME']
             sender_email = app.config['MAIL_DEFAULT_SENDER']
@@ -105,9 +102,10 @@ def contact():
             server.login(email_username, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
             server.quit()
-
+        
             return render_template('contact-form-sent.html')
-
+    
+    form_data = session.pop('form_data', {})
     return render_template('contact.html', sitekey=sitekey, form_data=form_data)
 
 if __name__ == "__main__":

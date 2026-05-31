@@ -74,7 +74,7 @@
     }
 </style>
 
-    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 <!-- Navbar -->
@@ -82,7 +82,7 @@
     
 <!-- Navigation -->
 
-<header id="header" class="header fixed-top">
+<header id="header" class="header fixed-top bg-dark">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
      
@@ -105,7 +105,7 @@
                          
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="{{ url_for('contact') }}">Contact</a></li>
+          <li><a class="nav-link scrollto" href="/contact">Contact</a></li>
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -116,7 +116,7 @@
 
 <main role="main">
 
-<div class="jumbotron">
+<div class="jumbotron" style="margin-top: 70px">
     <div class="container">
       <h1 class="header1">Javier Cristobal</h1>
       <p>This is my website with all my curriculum and certificates</p>
@@ -191,7 +191,7 @@ $(window).on('resize', function(){
 
 
 </script>
-    <script src="js/form-validation.js"></script>
+    
      
     
     <!-- Vendor JS Files -->
